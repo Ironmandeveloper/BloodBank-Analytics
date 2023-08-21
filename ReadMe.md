@@ -37,45 +37,36 @@ Campaign Management, Donor Management, Blood Ordering, reports, billing, Account
    npm run dev
    ```
 
-## :clipboard: Models
-
-### Dispenser
-
-- `status` (open or closed)
-- `flow_volume` (how many liters of beer come out per second)
-- `openTime` (when the dispenser was last opened)
-- `totalServed` (total volume of beer served)
-- `totalRevenue` (total revenue from the dispenser)
-- `pricePerLiter` (price per liter of beer)
-- `totalUses` (how many times the dispenser has been used)
-- `totalOpenTime` (total time the dispenser has been open in seconds)
-- `currentVolume` (current volume of beer left in the dispenser)
-
-### DispenserHistory
-
-- `dispenser` (ID of the dispenser)
-- `openedAt` (when the dispenser was opened)
-- `closedAt` (when the dispenser was closed)
-- `served` (volume of beer served during this use)
-- `revenue` (revenue generated during this use)
-
 ## :hammer_and_wrench: Services
 
-### DispenserService
-- `createDispenser`: Creates a new dispenser with the provided data.
-- `openDispenser`: Opens a dispenser. If the dispenser is already open or if its current volume is 0, it throws an error.
-- `closeDispenser`: Closes a dispenser and calculates the volume of beer served, the revenue generated, and the remaining beer. If the dispenser served more than 3 litres or the remaining volume is less than 1 litre, it closes the dispenser.
-- `getDispenser`: Retrieves a dispenser by ID.
+### Appointment Scheduling
 
-### DispenserHistoryService
+Easy to use Appointment Scheduling of Patients and Donors. 
 
-- `createDispenserHistory`: Creates a new dispenser history record with the provided dispenser data.
-- `getReport`: Retrieves a report of dispenser usage and revenue for a given time period.
+### Electronic Medical Records
 
+All data regarding blood inventory, patients and donors in one place. 
 
-## :warning: Note
+### Campaign Management
 
-This application assumes that all dispensers start with the same initial volume of beer, and that this initial volume is larger than the `flow_volume * totalOpenTime`. If a dispenser's volume goes below 1 litre, the dispenser will be closed automatically.
+Handle donations and collections from a Blood Camp. 
+
+### Inventory Management
+
+Handle all inventory efficiently including Blood 
+
+### Lab Module
+
+Simplify Lab-Management needs
+
+### Finance Management
+
+General Ledger, Stocks, Purchase Orders etc. 
+
+### Pharmacy Management
+
+Medicines and Medicine Donations Handling
+
 
 ![alt text](https://github.com/Ironmandeveloper/BloodBank-Analytics/blob/main/BDS.png?raw=true)
 ![alt text](https://github.com/Ironmandeveloper/BloodBank-Analytics/blob/main/LAB.png?raw=true)
